@@ -6,17 +6,20 @@ public class EmployeeResponse {
     String lastName;
     String email;
     String department;
-    String status;
+    Status status;
+    String employeeCode;
 
 
-    public EmployeeResponse(Long id, String firstName, String lastName, String email, String department, String status) {
+    public EmployeeResponse(Long id, String firstName, String lastName, String email, String department, Status status, String employeeCode) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.department = department;
         this.status = status;
+        this.employeeCode = employeeCode;
     }
+
 
     public Long getId() {
         return id;
@@ -38,7 +41,11 @@ public class EmployeeResponse {
         return department;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
+    }
+
+    public String getEmployeeCode() {
+        return employeeCode;
     }
 }

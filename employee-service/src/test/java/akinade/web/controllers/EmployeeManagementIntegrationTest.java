@@ -2,6 +2,7 @@ package akinade.web.controllers;
 
 import akinade.AbstractIT;
 import akinade.domain.dto.EmployeeRequest;
+import akinade.domain.dto.Status;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
@@ -24,7 +25,7 @@ public class EmployeeManagementIntegrationTest extends AbstractIT {
         req.setFirstName("John");
         req.setLastName("Smith");
         req.setEmail("john@corp.com");
-        req.setStatus("ACTIVE");
+        req.setStatus(Status.ACTIVE);
         req.setDepartmentId(1L); // Pre-seeded department in testdata.sql or migration
 
         ResponseEntity<String> response = restTemplate.postForEntity(

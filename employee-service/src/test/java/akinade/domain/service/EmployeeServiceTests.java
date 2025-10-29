@@ -3,10 +3,12 @@ package akinade.domain.service;
 
 import akinade.domain.dto.EmployeeRequest;
 import akinade.domain.dto.EmployeeResponse;
+import akinade.domain.dto.Status;
 import akinade.domain.entity.Department;
 import akinade.domain.entity.Employee;
 import akinade.domain.repository.DepartmentRepository;
 import akinade.domain.repository.EmployeeRepository;
+import akinade.domain.service.impl.EmployeeEventService;
 import akinade.domain.service.impl.EmployeeServiceImpl;
 import akinade.web.exception.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,6 +30,9 @@ public class EmployeeServiceTests {
 
     @Mock
     private DepartmentRepository departmentRepository;
+
+    @Mock
+    private EmployeeEventService employeeEventService;
 
     @InjectMocks
     private EmployeeServiceImpl employeeService;
@@ -56,7 +61,7 @@ public class EmployeeServiceTests {
         request.setFirstName("Toheeb");
         request.setLastName("Akande");
         request.setEmail("toheeb@corp.com");
-        request.setStatus("Active");
+        request.setStatus(Status.ACTIVE);
         request.setDepartmentId(1L);
 
         Department department = new Department();
@@ -65,10 +70,11 @@ public class EmployeeServiceTests {
 
         Employee employee = new Employee();
         employee.setId(100L);
+        employee.setEmployeeCode("D44");
         employee.setFirstName("Toheeb");
         employee.setLastName("Akande");
         employee.setEmail("toheeb@corp.com");
-        employee.setStatus("Active");
+        employee.setStatus(Status.ACTIVE);
         employee.setDepartment(department);
 
         // Mock repository behavior

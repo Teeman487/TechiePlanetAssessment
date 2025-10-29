@@ -1,5 +1,6 @@
 package akinade.domain.entity;
 
+import akinade.domain.dto.Status;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 
@@ -12,12 +13,17 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_id_generator")
     @SequenceGenerator(name = "employee_id_generator", sequenceName = "employee_id_seq", allocationSize = 1)
     private Long id;
+
+    @Transient
+    private String employeeCode;
     private String firstName;
     private String lastName;
 
     @Email
     private String email;
-    private String status;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id")
@@ -60,13 +66,15 @@ public class Employee {
         this.email = email;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
+
+
 
     public Department getDepartment() {
         return department;
@@ -80,7 +88,17 @@ public class Employee {
         return timeAt;
     }
 
+
+
     public void setTimeAt(LocalDateTime timeAt) {
         this.timeAt = timeAt;
+    }
+
+    public String getEmployeeCode() {
+        return employeeCode;
+    }
+
+    public void setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode;
     }
 }

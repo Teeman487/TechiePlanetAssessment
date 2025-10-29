@@ -4,7 +4,7 @@ public class EmployeeRequest {
     String firstName;
     String lastName;
     String email;
-    String status;
+    Status status;
     Long departmentId;
 
 
@@ -33,11 +33,11 @@ public class EmployeeRequest {
         this.email = email;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
