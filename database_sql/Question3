@@ -1,0 +1,75 @@
+| yr   | city    |
+| ---- | ------- |
+| 2004 | Athens  |
+| 2008 | Beijing |
+| 2012 | London  |
+| 2032 |         |
+
+
+| name    | country   |
+| ------- | --------- |
+| Sydney  | Australia |
+| Athens  | Greece    |
+| Beijing | China     |
+| London  | UK        |
+
+
+1. LEFT JOIN (games LEFT JOIN city)
+
+SELECT g.yr, g.city, c.country
+FROM games g
+LEFT JOIN city c
+    ON g.city = c.name;
+
+| yr   | city    | country |
+| ---- | ------- | ------- |
+| 2004 | Athens  | Greece  |
+| 2008 | Beijing | China   |
+| 2012 | London  | UK      |
+| 2032 | NULL    | NULL    |
+
+
+Explanation (LEFT JOIN):
+
+Get all (cities) and their latest (games) even
+if some (cities) are not yet assigned a game
+
+
+Returns everything from the left table (games).
+Matching rows from the RIGHT table (city)
+If no match is found, RIGHT table fields become NULL
+
+2032 has no city → no match in city table → return NULL.
+
+
+
+2. RIGHT JOIN
+
+SELECT g.yr, g.city, c.name AS city_name, c.country
+FROM games g
+RIGHT JOIN city c
+    ON g.city = c.name;
+
+| yr   | city    | city_name | country   |
+| ---- | ------- | --------- | --------- |
+| 2004 | Athens  | Athens    | Greece    |
+| 2008 | Beijing | Beijing   | China     |
+| 2012 | London  | London    | UK        |
+| 2032 | London  | London    | UK        |
+| NULL | NULL    | Sydney    | Australia |
+
+
+
+
+
+Explanation (RIGHT JOIN)
+Used when secondary table(city) is the focus
+
+Get all (games) and their (cities) even
+if some games are not yet assigned to a city
+
+Returns everything from the right table (city).
+Missing matches in the left table show NULL.
+
+Every city in the city table appears except Sydney (no matching games city),
+so Sydney will show NULL for year.
