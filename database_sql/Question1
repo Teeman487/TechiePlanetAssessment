@@ -1,0 +1,59 @@
+Given salaries:
+A = 100, B = 80, C = 100
+→ Second highest = 80.
+
+Correct Answers:
+✔ 1.
+SELECT DISTINCT(salary) FROM emp ORDER BY salary DESC LIMIT 1 OFFSET 1;
+
+Explanation:
+It orders distinct salaries descending: 100, 80 → OFFSET 1 → 80.
+
+✔ 2.
+SELECT MAX(salary) FROM emp WHERE salary < (SELECT MAX(salary) FROM emp);
+
+Explanation:
+MAX(salary) = 100
+This query finds the max salary less than 100 → 80.
+
+✔ 3.
+SELECT salary FROM (SELECT DISTINCT salary FROM emp ORDER BY salary DESC LIMIT 2) AS emp ORDER BY salary LIMIT 1;
+
+
+Explanation:
+Inner query: 100, 80
+Outer query picks the smallest → 80.
+
+
+
+✖ Incorrect Answers:
+✖ 4.
+SELECT DISTINCT salary FROM (SELECT salary FROM emp ORDER BY salary DESC LIMIT 2) AS emp ORDER BY salary LIMIT 1;
+
+
+Explanation:
+
+Inner query returns salaries: 100, 100 (not DISTINCT)
+After DISTINCT → 100, 100 → becomes 100
+Ordering → 100
+LIMIT 1 picks 100, which is wrong (should be 80).
+
+✖ 5.
+SELECT salary FROM emp ORDER BY salary DESC OFFSET 1 LIMIT 1;
+
+
+Explanation.
+
+Ordering with duplicates:
+
+100
+100
+80
+
+OFFSET 1 LIMIT 1 → gives 100, not 80.
+
+CORRECT OPTIONS
+
+✔ 1
+✔ 2
+✔ 3
