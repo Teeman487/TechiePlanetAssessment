@@ -1,0 +1,8 @@
+SELECT userId, AVG(duration) AS averageDuration FROM sessions
+GROUP BY userID having COUNT(*) > 1;
+
+Explanation:
+
+AVG(duration) calculates the average session duration for each user.
+GROUP BY userId groups all sessions by each user.
+HAVING COUNT(*) > 1 ensures only users with more than one session are returned
