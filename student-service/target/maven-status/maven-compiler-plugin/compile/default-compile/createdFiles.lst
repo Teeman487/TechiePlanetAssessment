@@ -1,0 +1,13 @@
+akinade\domain\repository\StudentRepository.class
+akinade\domain\service\impl\StudentServiceImpl.class
+akinade\domain\mapper\StudentMapper.class
+akinade\domain\service\StudentService.class
+akinade\StudentServiceApplication.class
+akinade\domain\model\Student.class
+akinade\domain\dto\StudentRequest.class
+akinade\domain\repository\SubjectScoreRepository.class
+akinade\domain\dto\SubjectScoreDTO.class
+akinade\domain\dto\StudentResponse.class
+akinade\domain\model\SubjectScore.class
+akinade\domain\model\Subject.class
+akinade\web\controllers\StudentController.class

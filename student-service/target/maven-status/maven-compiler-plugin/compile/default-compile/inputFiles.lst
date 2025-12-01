@@ -1,0 +1,13 @@
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\dto\StudentRequest.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\dto\StudentResponse.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\dto\SubjectScoreDTO.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\mapper\StudentMapper.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\model\Student.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\model\Subject.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\model\SubjectScore.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\repository\StudentRepository.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\repository\SubjectScoreRepository.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\service\impl\StudentServiceImpl.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\domain\service\StudentService.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\StudentServiceApplication.java
+C:\Users\Akinade Toheeb\IdeaProjects\TechiePlanetAssessment\application_development\student-service\src\main\java\akinade\web\controllers\StudentController.java
