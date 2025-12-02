@@ -9,10 +9,16 @@ public class RemoveDuplicatesMain {
                 {1, 2, 1, 1, 1, 1, 1}
         };
 
+
+
         int[][] output = removeDuplicates(input);
 
-
         for (int[] row : output) {
+            if (row == null) {
+                System.out.println("{ null }");
+                continue;
+            }
+
             System.out.print("{ ");
             for (int val : row) {
                 System.out.print(val + " ");
