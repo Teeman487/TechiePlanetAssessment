@@ -1,0 +1,15 @@
+We match  each games city or do a look up with the corresponding country from the second table:
+
+Mapping:
+       games
+
+Year	City	Country
+
+1896	Athens	Greece
+1948	London	UK
+2004	Athens	Greece
+2008	Beijing	China
+2012	London	UK
+
+Answer:
+Greece, UK, Greece, China, UK
