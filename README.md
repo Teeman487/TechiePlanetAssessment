@@ -30,7 +30,7 @@ Report Service (http://localhost:8082/api/reports)
 ## Database
 This project uses Flyway for schema migrations located in `db/migration`.
 
-## How to Run Web application under ..\TechiePlanetAssessment\application_development
+## How to Run Web application
 *  Routes to specific microservice (e.g: `cd report-service, cd student-service, cd api-gateway`)
 
 1. Ensure Docker and Docker Compose are installed: 
@@ -51,9 +51,6 @@ This project uses Flyway for schema migrations located in `db/migration`.
 ## Testing
 - Unit and Integration tests: `mvn test` or `mvn clean package`
 - Database migrations handled by Flyway
-
-
-
 
 
 ## Notes
