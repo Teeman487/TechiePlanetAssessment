@@ -8,7 +8,7 @@ public class TimeInWordsTest {
 
     @Test
     public void testExactHour() {
-        assertEquals("Five o’clock", TimeInWords.timeInWords(5, 0));
+        assertEquals("Five o'clock", TimeInWords.timeInWords(5, 0));
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TimeInWordsTest {
 
     @Test
     public void testZeroMinute() {
-        assertEquals("Ten o’clock", TimeInWords.timeInWords(10, 0));
+        assertEquals("Ten o'clock", TimeInWords.timeInWords(10, 0));
 
 
     }
