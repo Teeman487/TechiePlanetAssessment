@@ -16,7 +16,7 @@ public class TimeInWords {
         if (hour < 1 || hour > 12 || minutes < 0 || minutes > 59) return "Invalid input";
 
         return switch (minutes) {
-            case 0 -> capitalize(NUMBERS[hour] + " o’clock");
+            case 0 -> capitalize(NUMBERS[hour] + " o'clock");
             case 15 -> capitalize("quarter past " + NUMBERS[hour]);
             case 30 -> capitalize("half past " + NUMBERS[hour]);
             case 45 -> capitalize("quarter to " + NUMBERS[(hour % 12) + 1]);
