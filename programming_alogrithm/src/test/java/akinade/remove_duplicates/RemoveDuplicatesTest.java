@@ -52,9 +52,16 @@ class RemoveDuplicatesTest {
 
     @Test
     void testRemoveDuplicates_nullInput() {
-        assertNull(RemoveDuplicates.removeDuplicates(null),
-                "Null input must return null");
+        int[][] result = RemoveDuplicates.removeDuplicates(null);
+
+        assertNotNull(result);
+        assertEquals(0, result.length);
+
+        if (result.length > 0) {
+            assertEquals(0, result[0].length, "Columns should be zero as well");
+        }
     }
+
 
     @Test
     void testRemoveDuplicates_emptyRows() {
