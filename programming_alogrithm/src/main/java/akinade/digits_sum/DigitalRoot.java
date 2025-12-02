@@ -4,7 +4,8 @@ public class DigitalRoot {
     public static int sumDigits(String s) {
         if (s == null || s.isEmpty()) return 0;
 
-        int first = s.charAt(0) - '0';  //
+      //  int first = s.charAt(0) - '0';  //
+        int first = Character.getNumericValue(s.charAt(0));
         return first + sumDigits(s.substring(1));
     }
 
