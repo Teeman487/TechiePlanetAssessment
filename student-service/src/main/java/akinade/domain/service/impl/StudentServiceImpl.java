@@ -1,5 +1,6 @@
 package akinade.domain.service.impl;
 
+import akinade.domain.StudentNotFoundException;
 import akinade.domain.dto.StudentRequest;
 import akinade.domain.dto.StudentResponse;
 import akinade.domain.mapper.StudentMapper;
@@ -39,7 +40,7 @@ public class StudentServiceImpl implements StudentService {
     public StudentResponse getStudent(UUID id) {
         return studentRepository.findById(id)
                 .map(StudentMapper::toResponse)
-                .orElseThrow( () -> new RuntimeException("Could not find student with id: " + id));
+                .orElseThrow( () -> new StudentNotFoundException("Could not find student with id: " + id));
     }
 
     public List<StudentResponse> getAllStudents() {
