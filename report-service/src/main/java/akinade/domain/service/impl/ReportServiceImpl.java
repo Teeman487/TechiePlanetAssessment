@@ -62,10 +62,12 @@ public class ReportServiceImpl implements ReportService {
             int n = sorted.size();
             if(n %2 ==1) //  31 ...
                 return sorted.get(n/2);
-        return scores.stream().mapToInt(i -> i).average().orElse(0); // average control..
+        return (sorted.get(n / 2 - 1) + sorted.get(n / 2)) / 2.0;
     }
 
     private int computeMode(List<Integer> scores){
+        if (scores.isEmpty()) return 0;
+
         Map<Integer, Long> freq = scores.stream()
                 .collect(Collectors.groupingBy(i -> i, Collectors.counting()));
         return freq.entrySet().stream()
