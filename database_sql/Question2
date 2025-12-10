@@ -11,5 +11,9 @@ Year	City	Country
 2008	Beijing	China
 2012	London	UK
 
+
+SELECT g.Year, g.City, c.country FROM Games g JOIN City c on g.city = c.name;
+
 Answer:
 Greece, UK, Greece, China, UK
+
