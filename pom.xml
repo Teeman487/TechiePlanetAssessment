@@ -17,6 +17,7 @@
 
     <modules>
 
+
         <module>report-service</module>
         <module>student-service</module>
     </modules>
